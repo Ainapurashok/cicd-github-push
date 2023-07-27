@@ -1,11 +1,4 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.12.1"
-    }
-  }
-}
+
 
 # Configure the AWS Provider
 provider "aws" {
@@ -16,7 +9,7 @@ provider "aws" {
 # store the terraform state file in s3
 terraform {
   backend "s3" {
-    bucket  = "ex2-terraform-state-buckets"
+    bucket  = "ex4-terraform-state-buckets"
     key     = "build/terraform.tfstate"
     region  = "ca-central-1"
     profile = "default"
